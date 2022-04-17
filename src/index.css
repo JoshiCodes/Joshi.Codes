@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,87 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.waveContainer {
+  @apply pt-32 bg-background;
+  color: #FFF;
+  text-align: center;
+  overflow: hidden;
+}
+
+.waveContainer > svg {
+  display: block;
+  transform-origin: bottom;
+  animation: startupWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.waveContainer > div svg {
+  display: block;
+  transform-origin: bottom;
+  animation: startupWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.wave {
+  display: block;
+  transform-origin: bottom;
+  bottom: 0;
+  animation: waveAnimation 7s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.badge {
+  @apply mt-2 inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none rounded-full
+}
+
+.btn {
+  @apply font-semibold text-gray-100 hover:text-white py-2 px-6 transition-all duration-500 bg-primary rounded-lg hover:shadow-xl
+}
+
+.btn-lg {
+  @apply btn lg:py-3 lg:px-8 lg:text-xl
+}
+
+.btn-big {
+  @apply btn lg:py-4 lg:px-10 lg:text-3xl
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-tl from-primary to-secondary
+}
+
+.link {
+  @apply hover:text-primary transition-all duration-200
+}
+
+.link-secondary {
+  @apply hover:text-secondary transition-all duration-200
+}
+
+.link-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary
+}
+
+.currentLink {
+  @apply block py-2 pr-4 pl-3 text-white md:p-0 link-gradient
+}
+
+.navLink {
+  @apply block py-2 pr-4 pl-3 text-gray-100
+}
+
+@keyframes startupWave {
+  0% {
+    transform: scale(1,0);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
 }
