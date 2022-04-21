@@ -1,5 +1,8 @@
 import Wave from "./components/wave";
+
 import ProjectsContainer from "./components/projects";
+import About from './components/about';
+import SkillsContainer from "./components/skills";
 
 function App() {
   return (
@@ -17,19 +20,30 @@ function App() {
               </div>
           </div>
 
-          <section id={"about"} className={"mx-3 md:mx-8 pt-8 md:pt-12"}>
-              <div className={"pt-3 text-center"}>
-                  <h2 className={"text-4xl md:text-6xl font-semibold pb-6"}>Über mich</h2>
+          <div className={"mx-3 md:mx-8"}>
 
-              </div>
-          </section>
+              <section id={"about"}>
+                  <div className={"pt-3 text-center"}>
+                      <h2 className={"text-4xl md:text-6xl font-semibold pb-6"}>Über mich</h2>
+                      <About />
+                  </div>
+              </section>
 
-          <section id={"projects"} className={"mx-3 md:mx-8 pt-8 md:pt-12"}>
-              <div className={"pt-3 text-center"}>
-                  <h2 className={"text-4xl md:text-6xl font-semibold pb-6"}>Meine Projekte</h2>
-                  <ProjectsContainer />
-              </div>
-          </section>
+              <section id={"projects"}>
+                  <div className={"pt-3 text-center"}>
+                      <h2 className={"text-4xl md:text-6xl font-semibold pb-6"}>Meine Projekte</h2>
+                      <ProjectsContainer />
+                  </div>
+              </section>
+
+              <section id={"skills"}>
+                  <div className={"pt-3 text-center"}>
+                      <h2 className={"text-4xl md:text-6xl font-semibold pb-6"}>Meine Skills</h2>
+                      <SkillsContainer />
+                  </div>
+              </section>
+
+          </div>
 
       </>
   );
