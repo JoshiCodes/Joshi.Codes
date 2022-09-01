@@ -1,3 +1,7 @@
+# DIESES REPO IST VERALTET!
+# DIE NEUE VERSION MEINES PORTFOLIOS FINDET SICH UNTER https://github.com/JoshiCodes/JoshiCodesRework
+# DIE WEB-URL BLEIBT UNVERÄNDERT!
+
 # Joshi.Codes
 ## Das ist das Repo meiner offiziellen Webseite!
 
